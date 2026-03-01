@@ -1,4 +1,4 @@
-module Fibonacci
+module internal FibonacciImpl
 
 open System
 
