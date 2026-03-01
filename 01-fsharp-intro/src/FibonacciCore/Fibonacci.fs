@@ -1,6 +1,6 @@
 module internal FibonacciImpl
 
-open System
+open System.Numerics
 
 let rec raiseXToPowerN (x: seq<seq<uint64>>)  (n: uint64) idMatrix matrixMultiply =
     match n with

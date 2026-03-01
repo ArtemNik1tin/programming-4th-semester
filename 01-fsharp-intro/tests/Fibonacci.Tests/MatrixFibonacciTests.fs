@@ -4,11 +4,14 @@ module FibonacciTests =
     open NUnit.Framework
     open FsUnit
     open FibonacciCore
+ 
+    [<TestCase(0UL, 0UL)>]
+    [<TestCase(1UL, 1UL)>]
+    [<TestCase(2UL, 1UL)>]
+    [<TestCase(10UL, 55UL)>]
+    let ``getFibonacci should return correct num for base cases`` (n, expected) =
+        MatrixFib.getFibonacci n |> should equal expected
 
     [<Test>]
-    let ``getFibonacci should return 0 for 0`` () =
-        MatrixFib.getFibonacci 0UL |> should equal 0UL
-
-    [<Test>]
-    let ``getFibonacci should return 1 for 1`` () =
-        MatrixFib.getFibonacci 1UL |> should equal 1UL
+        let ``F92 is the largest Fibonacci fitting in uint64``() =
+            MatrixFib.getFibonacci 92UL |> should equal 7540113804746346429UL
