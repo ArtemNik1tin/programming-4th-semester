@@ -17,7 +17,6 @@ let multiplyMatrices (a: seq<seq<uint64>>) (b: seq<seq<uint64>>): seq<seq<uint64
     Seq.map (fun row ->
         Seq.map (fun col ->
             Seq.zip row col |> Seq.sumBy (fun (n, m) -> n * m)) bTranspose) a
-    
 
 let getIdMatrix (size: int): seq<seq<uint64>> =
     Seq.init size (fun rowIndex -> Seq.init size (fun colIndex -> if rowIndex = colIndex then 1UL else 0UL))
