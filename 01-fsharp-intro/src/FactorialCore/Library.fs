@@ -1,4 +1,4 @@
-namespace FacctorialCore
+namespace FactorialCore
 
-module FacctorialCore =
+module FactorialCore =
     let calcFactorial n = FactorialImpl.factorialTree n
