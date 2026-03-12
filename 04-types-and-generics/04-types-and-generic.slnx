@@ -1,2 +1,8 @@
 <Solution>
+  <Folder Name="/src/">
+    <Project Path="src/PointFree/PointFree.fsproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/PointFree.Tests/PointFree.Tests.fsproj" />
+  </Folder>
 </Solution>
