@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/BracketSequence/BracketSequence.fsproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/BracketSequence.Tests/BracketSequence.Tests.fsproj" />
+  </Folder>
+</Solution>
