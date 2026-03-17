@@ -3,6 +3,6 @@
     <Project Path="src/NumberOfDegrees/NumberOfDegrees.fsproj" />
   </Folder>
   <Folder Name="/tests/">
-    <Project Path="tests/NumberOfDegrees.Tests/NumberOfDegrees.Tests.fsproj">
+    <Project Path="tests/NumberOfDegrees.Tests/NumberOfDegrees.Tests.fsproj" />
   </Folder>
 </Solution>
