@@ -1,0 +1,28 @@
+﻿namespace NumberOfDegrees.Tests
+
+open NUnit.Framework
+open FsUnit
+open NumberOfDegrees
+
+module NumberOfDegreesTests =
+    [<Test>]
+    let ``getListOfPowersOfTwoFromNToM should return None for incorrect list size`` () =
+        NumberOfDegrees.getListOfPowersOfTwoFromNToM 5 1 |> should equal None
+
+    [<Test>]
+    let ``getListOfPowersOfTwoFromNToM should return None for negative numbers`` () =
+        NumberOfDegrees.getListOfPowersOfTwoFromNToM -3 1 |> should equal None
+        NumberOfDegrees.getListOfPowersOfTwoFromNToM -3 -1 |> should equal None
+
+    let ``getListOfPowersOfTwoFromNToM should return correct Lists for simple cases`` () =
+        match NumberOfDegrees.getListOfPowersOfTwoFromNToM 1 2 with
+        | Some result -> result |> should equal [ 2; 4 ]
+        | None -> failwith "getListOfPowersOfTwoFromNToM has returned None"
+
+        match NumberOfDegrees.getListOfPowersOfTwoFromNToM 0 0 with
+        | Some result -> result |> should equal []
+        | None -> failwith "getListOfPowersOfTwoFromNToM has returned None"
+
+        match NumberOfDegrees.getListOfPowersOfTwoFromNToM 1 10 with
+        | Some result -> result |> should equal [ 2; 4; 8; 16; 32; 64; 128; 256; 512; 1024 ]
+        | None -> failwith "getListOfPowersOfTwoFromNToM has returned None"
