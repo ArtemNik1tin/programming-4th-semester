@@ -1,7 +1,7 @@
 ﻿namespace NumberSearch
 
 module NumberSearch =
-    let rec getFirstOccurrence searchSpace desired =
+    let getFirstOccurrence searchSpace desired =
         let rec loop searchSpace desired index =
             match searchSpace with
             | head :: _ when head = desired -> Some(index)
