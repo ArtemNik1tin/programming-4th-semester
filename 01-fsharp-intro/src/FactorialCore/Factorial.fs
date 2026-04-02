@@ -1,19 +1,20 @@
 module FactorialImpl
 
-let rec calculateProductInInterval (left: uint64) (right: uint64) : uint64 =
+let rec calculateProductInInterval left right =
     if left > right then
-        uint64 1
+        1
     elif left = right then
         left
-    elif right - left = uint64 1 then
+    elif right - left = 1 then
         left * right
     else
-        let m = (left + right) / uint64 2
+        let m = (left + right) / 2
 
-        calculateProductInInterval left m
-        * calculateProductInInterval (m + uint64 1) right
+        calculateProductInInterval left m * calculateProductInInterval (m + 1) right
 
-let factorialTree (n: uint64) : uint64 =
-    if n = uint64 0 then uint64 1
-    elif n = uint64 1 || n = uint64 2 then n
-    else calculateProductInInterval (uint64 2) n
+let factorialTree n =
+    match n with
+    | 0 -> 1
+    | 1
+    | 2 -> n
+    | _ -> calculateProductInInterval 2 n
