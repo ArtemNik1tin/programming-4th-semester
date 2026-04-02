@@ -1,4 +1,8 @@
-﻿namespace Task1
+﻿// <copyright file="Library.fs" company="Task1">
+// Licensed under the MIT License. See LICENSE file in the project root for full license information.
+// </copyright>
+
+namespace Task1
 
 module ListUtils =
     /// <summary>Finds the smallest element in a list.</summary>
