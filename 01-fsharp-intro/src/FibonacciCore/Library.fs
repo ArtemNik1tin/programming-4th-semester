@@ -1,4 +1,4 @@
-﻿module MatrixFibonacciUtils
+module MatrixFibonacciUtils
 
 let rec raiseXToPowerN (x: seq<seq<uint64>>) (n: uint64) idMatrix matrixMultiply =
     match n with
@@ -19,7 +19,7 @@ let multiplyMatrices (a: seq<seq<uint64>>) (b: seq<seq<uint64>>) : seq<seq<uint6
 let getIdMatrix (size: int) : seq<seq<uint64>> =
     Seq.init size (fun rowIndex -> Seq.init size (fun colIndex -> if rowIndex = colIndex then 1UL else 0UL))
 
-let getFibonacciNumber (n: uint64) : uint64 =
+let getFibonacciNumberForAbsValue (n: uint64) : uint64 =
     match n with
     | 0UL -> 0UL
     | 1UL -> 1UL
@@ -32,3 +32,13 @@ let getFibonacciNumber (n: uint64) : uint64 =
                 multiplyMatrices
 
         Seq.item 1 (Seq.item 0 F)
+
+let getFibonacciNumber (n: int64) : int64 =
+    match n with
+    | _ when n >= 0 -> int64 (getFibonacciNumberForAbsValue (uint64 n))
+    | _ ->
+        let absNumber = uint64 (abs n)
+
+        match absNumber % 2UL with
+        | 0UL -> -int64 (getFibonacciNumberForAbsValue absNumber)
+        | _ -> int64 (getFibonacciNumberForAbsValue absNumber)
