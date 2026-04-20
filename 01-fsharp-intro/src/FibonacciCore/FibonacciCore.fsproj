@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Fibonacci.fs" />
     <Compile Include="Library.fs" />
   </ItemGroup>
 
