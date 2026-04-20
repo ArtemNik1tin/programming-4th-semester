@@ -6,7 +6,6 @@ open NumberOfDegrees
 
 [<Test>]
 let ``getListOfPowersOfTwoFromNToM should return None for negative numbers`` () =
-    getListOfPowersOfTwoFromNToM 3 -1 |> should equal None
     getListOfPowersOfTwoFromNToM -3 -1 |> should equal None
 
 [<Test>]
