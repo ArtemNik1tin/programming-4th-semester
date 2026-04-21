@@ -1,6 +1,6 @@
 <Solution>
   <Folder Name="/src/">
-    <Project Path="src/FactorialCore/FactorialCore.fsproj" />
+    <Project Path="src/Factorial/Factorial.fsproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/Factorial.Tests/Factorial.Tests.fsproj" />
