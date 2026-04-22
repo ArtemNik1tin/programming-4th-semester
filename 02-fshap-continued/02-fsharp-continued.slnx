@@ -1,6 +1,8 @@
 <Solution>
   <Folder Name="/src/">
+    <Project Path="src/EvenNumbers/EvenNumbers.fsproj" />
   </Folder>
   <Folder Name="/tests/">
+    <Project Path="tests/EvenNumbers.Tests/EvenNumbers.Tests.fsproj" />
   </Folder>
 </Solution>
