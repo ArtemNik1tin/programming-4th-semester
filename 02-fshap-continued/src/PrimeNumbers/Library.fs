@@ -1,5 +1,12 @@
+// <copyright file="Library.fs" company="ArtemNik1tin">
+// Licensed under the MIT License. See LICENSE file in the project root for full license information.
+// </copyright>
+
 module PrimeNumbers
 
+/// <summary>
+/// Generates an infinite sequence of prime numbers.
+/// </summary>
 let getPrimeNumbersSeq =
     let isPrime n =
         let rec next isPrime divider =
