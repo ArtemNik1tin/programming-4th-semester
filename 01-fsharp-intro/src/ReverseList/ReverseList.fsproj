@@ -5,7 +5,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
-  <ItemGroup><Compile Include="../../../02-fshap-continued/tests/ReverseList.Tests/ReverseListTests.fs" />
+  <ItemGroup>
     <Compile Include="Library.fs" />
   </ItemGroup>
 
