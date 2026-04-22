@@ -1,11 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
-  <ItemGroup>
+  <ItemGroup><Compile Include="../../../02-fshap-continued/tests/ReverseList.Tests/ReverseListTests.fs" />
     <Compile Include="Library.fs" />
   </ItemGroup>
 
