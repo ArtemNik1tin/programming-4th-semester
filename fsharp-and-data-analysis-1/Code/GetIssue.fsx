@@ -8,7 +8,8 @@ type GitHub = JsonProvider<
 let topRecentlyUpdatedIssues =
     GitHub.GetSamples()
     |> Seq.filter (fun issue -> issue.State = "open")
-    |> Seq.sortBy (fun issue -> System.DateTimeOffset.Now - issue.UpdatedAt)
+    |> Seq.sortBy (fun issue ->
+        System.DateTimeOffset.Now - issue.UpdatedAt)
     |> Seq.truncate 2
 
 for issue in topRecentlyUpdatedIssues do
