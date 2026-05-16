@@ -1,4 +1,7 @@
-﻿module NumberOfDegreesTests
+﻿// Copyright (c) 2026. All rights reserved.
+// Licensed under the MIT License. See LICENSE file in the repository root for full license information.
+
+module NumberOfDegreesTests
 
 open NUnit.Framework
 open FsUnit

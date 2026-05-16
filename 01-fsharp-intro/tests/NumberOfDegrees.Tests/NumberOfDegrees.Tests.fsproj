@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="6.0.4" />
+    <PackageReference Include="Fantomas.FCS" Version="8.0.0-alpha-012" />
     <PackageReference Include="FsUnit" Version="7.1.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.0" />
     <PackageReference Include="NUnit" Version="4.3.2" />
