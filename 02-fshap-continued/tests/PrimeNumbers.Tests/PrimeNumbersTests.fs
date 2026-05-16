@@ -46,3 +46,11 @@ let ``getPrimeNumbersSeq should have type seq<int>`` () =
 
     Seq.takeWhile (fun elem -> elem < littleSeqSize) primeSeq
     |> should be instanceOfType<seq<int>>
+
+[<Test>]
+let ``getPrimeNumbersSeq returns 50th prime`` () =
+    getPrimeNumbersSeq |> Seq.item 49 |> should equal 229
+    
+[<Test>]
+let ``getPrimeNumbersSeq returns 100th prime`` () =
+    getPrimeNumbersSeq |> Seq.item 99 |> should equal 541
