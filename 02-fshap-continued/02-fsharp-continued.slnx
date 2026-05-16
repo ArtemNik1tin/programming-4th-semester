@@ -1,6 +1,8 @@
 <Solution>
   <Folder Name="/src/">
+    <Project Path="src/ParsingTree/ParsingTree.fsproj" />
   </Folder>
   <Folder Name="/tests/">
+    <Project Path="tests/ParsingTree.Tests/ParsingTree.Tests.fsproj" />
   </Folder>
 </Solution>
