@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="TreeADTTests.fs" />
     <Compile Include="ParsingTreeTests.fs" />
   </ItemGroup>
 
