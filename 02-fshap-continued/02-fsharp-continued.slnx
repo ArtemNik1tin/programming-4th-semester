@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/src/">
+    <Project Path="MapForTree/MapForTree.fsproj" />
   </Folder>
   <Folder Name="/tests/">
   </Folder>
