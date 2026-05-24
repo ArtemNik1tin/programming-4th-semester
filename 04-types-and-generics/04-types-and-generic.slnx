@@ -1,2 +1,9 @@
 <Solution>
+  <Folder Name="/src/">
+    <Project Path="src/PhoneDirectory/PhoneDirectory.fsproj" />
+    <Project Path="src/PhoneDirectory.App/PhoneDirectory.App.fsproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/PhoneDirectory.Tests/PhoneDirectory.Tests.fsproj" />
+  </Folder>
 </Solution>
