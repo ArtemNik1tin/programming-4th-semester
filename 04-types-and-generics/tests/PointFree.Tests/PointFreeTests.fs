@@ -9,7 +9,7 @@ type PointFreeTests() =
 
     [<Property>]
     member _.``funcPointFree should be equivalent to funcOriginal`` (x: int) (l: int list) =
-        let resultOriginal = PointFree.func x l
-        let resultPointFree = PointFree.funcPointFree x l
+        let resultOriginal = multiplyEachOriginal x l
+        let resultPointFree = multiplyEach x l
 
         resultOriginal = resultPointFree
