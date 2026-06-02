@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/LambdaInterpreter/LambdaInterpreter.fsproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/LambdaInterpreter.Tests/LambdaInterpreter.Tests.fsproj" />
+  </Folder>
+</Solution>
