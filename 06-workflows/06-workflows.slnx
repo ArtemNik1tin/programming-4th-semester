@@ -1,0 +1,10 @@
+<Solution>
+    <Folder Name="/src/">
+        <Project Path="src/CalculationsOnLines/CalculationsOnLines.fsproj" />
+        <Project Path="src/RoundingUpWorkflow/RoundingUpWorkflow.fsproj" />
+    </Folder>
+    <Folder Name="/tests/">
+        <Project Path="tests/CalculationsOnLines.Tests/CalculationsOnLines.Tests.fsproj" />
+        <Project Path="tests/RoundingUpWorkflow.Tests/RoundingUpWorkflow.Tests.fsproj" />
+    </Folder>
+</Solution>
