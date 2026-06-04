@@ -1,0 +1,10 @@
+<Solution>
+    <Folder Name="/src/">
+        <Project Path="src/Lazy/Lazy.fsproj" />
+        <Project Path="src/MiniCrawler/MiniCrawler.fsproj" />
+    </Folder>
+    <Folder Name="/tests/">
+        <Project Path="tests/Lazy.Tests/Lazy.Tests.fsproj" />
+        <Project Path="tests/MiniCrawler.Tests/MiniCrawler.Tests.fsproj" />
+    </Folder>
+</Solution>
