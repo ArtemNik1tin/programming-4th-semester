@@ -4,8 +4,6 @@ open NUnit.Framework
 open FsUnit
 open MiniCrawler
 
-// ----- extractLinks tests -----
-
 [<Test>]
 let ``extractLinks finds a single http link`` () =
     let html = "<a href=\"http://example.com\">link</a>"
