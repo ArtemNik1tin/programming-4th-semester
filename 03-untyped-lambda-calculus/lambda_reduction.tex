@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\begin{document}
+
+\noindent\textbf{Базовое правило вычислений ($\beta$-редукция):}
+\begin{align*}
+    (\lambda x. M) N &\rightarrow_\beta M[x \leftarrow N]
+\end{align*}
+
+\noindent\textbf{Утверждение.} Данный $\lambda$-терм не имеет нормальной формы.
+
+\begin{proof}[Доказательство]
+Для удобства обозначим бесконечно расходящийся субтерм $(\lambda b. b b)(\lambda b. b b)$ как $\Omega$. Выполним последовательную редукцию исходного выражения:
+\begin{align*}
+    ((\lambda a. (\lambda b. b b) (\lambda b. b b)) b) ((\lambda c. (c b)) (\lambda a. a)) 
+    &= ((\lambda b. b b) (\lambda b. b b)) ((\lambda c. (c b)) (\lambda a. a)) \\
+    &= \Omega \ ((\lambda c. (c b)) (\lambda a. a)) \\
+    &= \Omega \ ((\lambda a. a) b) \\
+    &= \Omega \ b
+\end{align*}
+Так как левый аппликативный хвост сводится к циклическому комбинатору $\Omega$, который бесконечно редуцируется в самого себя, терм расходится и не имеет нормальной формы.
+\end{proof}
+
+\end{document}

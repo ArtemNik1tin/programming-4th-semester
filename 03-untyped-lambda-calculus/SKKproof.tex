@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\begin{document}
+
+\noindent\textbf{Определение комбинаторов через $\lambda$-абстракции:}
+\begin{align*}
+    S &\equiv \lambda x. \lambda y. \lambda z. x z (y z) \\
+    K &\equiv \lambda x. \lambda y. x \\
+    I &\equiv \lambda x. x
+\end{align*}
+
+\noindent\textbf{Утверждение.} $SKK = I$
+
+\begin{proof}[Доказательство]
+Пусть $x$ — произвольный $\lambda$-терм. Покажем, что применение комбинатора $SKK$ к терму $x$ с помощью последовательных шагов $\beta$-редукции приводит к той же нормальной форме, что и применение комбинатора $I$.
+
+1. Раскроем определение комбинатора $S$ в выражении $(SKK)x$ и выполним пошаговую редукцию внешних лямбда-абстракций:
+\begin{align*}
+    (SKK)x &\equiv \left( \Big( \big( \lambda x. \lambda y. \lambda z. x z (y z) \big) K \Big) K \right) x \\
+    &\rightarrow_\beta \left( \big( \lambda y. \lambda z. K z (y z) \big) K \right) x \quad \text{--- подстановка } [x \leftarrow K] \\
+    &\rightarrow_\beta \big( \lambda z. K z (K z) \big) x \qquad\qquad \text{--- подстановка } [y \leftarrow K] \\
+    &\rightarrow_\beta K x (K x) \qquad\qquad\qquad\quad \text{--- подстановка } [z \leftarrow x]
+\end{align*}
+
+2. Теперь строго раскроем оставшийся комбинатор $K$. Для избежания конфликта имён переменных переименуем связанные переменные в определении $K$ как $u$ и $v$ (то есть $K \equiv \lambda u. \lambda v. u$):
+\begin{align*}
+    K x (K x) &\equiv (\lambda u. \lambda v. u) x (K x) \\
+    &\rightarrow_\beta (\lambda v. x) (K x) \quad \text{--- подстановка } [u \leftarrow x] \\
+    &\rightarrow_\beta x \qquad\qquad\quad \text{--- подстановка } [v \leftarrow K x]
+\end{align*}
+
+Используя транзитивное замыкание отношений редукции ($\rightarrow_\beta^*$), получаем:
+\[ (SKK)x \rightarrow_\beta^* x \]
+
+3. С другой стороны, рассмотрим поведение комбинатора $I$ на том же терме $x$:
+\[ Ix \equiv (\lambda x. x) x \rightarrow_\beta x \]
+
+Таким образом, для любого терма $x$ выполняется эквивалентность вычислений:
+\[ (SKK)x = Ix \]
+
+Применим \textbf{принцип экстенсиональности}: если два $\lambda$-терма $M$ и $N$ ведут себя одинаково при применении к любой произвольной переменной $x$ (то есть $M x = N x$, где $x$ не является свободной переменной в $M$ и $N$), то сами эти функции тождественно равны ($M = N$).
+
+Полагая $M \equiv SKK$ и $N \equiv I$, в силу экстенсиональности получаем искомое равенство:
+\[ SKK = I \]
+\end{proof}
+
+\end{document}
