@@ -1,0 +1,8 @@
+<Solution>
+    <Folder Name="/src/">
+        <Project Path="src/LocalNetwork/LocalNetwork.fsproj" />
+    </Folder>
+    <Folder Name="/tests/">
+        <Project Path="tests/LocalNetwork.Tests/LocalNetwork.Tests.fsproj" />
+    </Folder>
+</Solution>
